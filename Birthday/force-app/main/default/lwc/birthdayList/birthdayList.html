@@ -1,0 +1,23 @@
+<template>
+  <div class="HappyBirthday"> Happy Birthday</div> 
+  <lightning-card  title="Birthday List">
+    <lightning-combobox 
+            name="color" 
+            label="Please Select Birthday Month" 
+            value={selectedMonth} 
+            placeholder="Select Month" 
+            options={monthOptions}
+            onchange={handleChange} 
+            class="dropdown"
+            required >
+    </lightning-combobox>
+<p>Selected month is: <b>{selectedMonth}</b></p>
+</lightning-card>
+  <!--<lightning-card title="Confetti">
+    <lightning-button
+      label="Basic Cannon"
+      onclick={basicCannon}
+      class="slds-m-left_x-small"
+    ></lightning-button>
+    </lightning-card>--> 
+</template>
