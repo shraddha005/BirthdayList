@@ -1,23 +1,96 @@
 <template>
-  <div class="HappyBirthday"> Happy Birthday</div> 
-  <lightning-card  title="Birthday List">
-    <lightning-combobox 
-            name="color" 
-            label="Please Select Birthday Month" 
-            value={selectedMonth} 
-            placeholder="Select Month" 
-            options={monthOptions}
-            onchange={handleChange} 
-            class="dropdown"
-            required >
-    </lightning-combobox>
-<p>Selected month is: <b>{selectedMonth}</b></p>
-</lightning-card>
-  <!--<lightning-card title="Confetti">
-    <lightning-button
-      label="Basic Cannon"
-      onclick={basicCannon}
-      class="slds-m-left_x-small"
-    ></lightning-button>
-    </lightning-card>--> 
+
+<div class="container">
+
+<p class="styleText" >&nbsp;&nbsp;&nbsp;Events and Activities &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+
+
+
+<lightning-combobox 
+name="month" 
+value={selectedMonth} 
+placeholder={selectedMonth}
+options={monthOptions}
+onchange={handleChange}
+class="dropdown"
+>
+
+</lightning-combobox> 
+<br/>
+
+<p class="styleText1" style="font-size:30px">&nbsp;&nbsp;🎂&nbsp;&nbsp; </p>
+  <p class="styleText1">Birthday's  </p>
+  
+<lightning:card >
+<template if:true={showError}>
+  <div class="slds-m-vertical_medium">
+    <div class="slds-box box" style="font-size: 15px;display:inline-block; ">
+      <p class="styleText1" >No Birthday's this Month! &nbsp;&nbsp; </p>
+  <p class="styleText1" style="font-size:30px">  ☹️ </p>
+        
+    </div>
+    
+  </div>
+</template>
+</lightning:card>
+
+  <template if:true={showTable}>
+    <div class="slds-box box">
+  <table>
+  <tr>
+      <th>Name</th>
+      <th>Birthdate</th>
+  </tr>
+  <template for:each={contactsNames} for:item="contact">
+          
+  <tr key={contact.id}>
+      <td style="color:#0066cc">{contact.Name} </td>
+      <td>{contact.Birthdate}</td>
+              
+  </tr>
+              
+  </template>
+</table>
+</div>
+</template>
+
+<p class="styleText1" style="font-size:30px">&nbsp;&nbsp;🏆&nbsp;&nbsp; </p>
+  <p class="styleText1">Work Anniversary's  </p>
+
+<lightning:card >
+<template if:true={showError1}>
+  <div class="slds-m-vertical_medium">
+    <div class="slds-box box" style="font-size: 15px;display:inline-block; ">
+      <p class="styleText1" >No Work Anniversaries this Month! &nbsp;&nbsp; </p>
+  <p class="styleText1" style="font-size:30px">  ☹️ </p>
+        
+    </div>
+    
+  </div>
+</template>
+</lightning:card>
+
+  <template if:true={showTable1}>
+    <div class="slds-box box">
+  <table>
+  <tr>
+      <th>Name</th>
+      <th>Date of Joining</th>
+  </tr>
+  <template for:each={contactsNames1} for:item="contact">
+          
+  <tr key={contact.id}>
+      <td style="color:#0066cc">{contact.Name} </td>
+      <td>{contact.Date_of_Joining__c}
+       
+        </td>
+              
+  </tr>
+              
+  </template>
+</table>
+</div>
+</template> 
+</div>
 </template>

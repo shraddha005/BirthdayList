@@ -1,9 +1,71 @@
+.container{
+  background-color: white;
+}
 .HappyBirthday{
     color:#0066cc ;
-    font-size : 6Rem;
-    font-family : Lucida Console;
+    font-size : 2Rem;
+    font-family : Arial;
 }
 .dropdown{
-   color :#0066cc;
+  
+   font-family:Arial;
+   display:inline-block;
+   width: 30%;
+   border-radius: 0%;
+   border-bottom : 2px solid #0066cc;
+   border-radius: 0px 0px 0px 0px;
+}
+table {
+    font-family:Arial;
+  border-collapse: collapse;
+  
+  
+}
+
+td {
+  border: 0px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+th {
+    border: 0px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    
    
+  }
+
+
+.styleText {
+    font-family:Arial;
+    color:black;
+    font-weight: bold;
+    font-size: 15px;
+   display:inline-block;
+}
+.styleText1 {
+    font-family:Arial;
+    color:black;
+    font-weight: bold;
+    font-size: 15px;
+    display:inline-block;
+}
+.bodyStyle{
+    font-family:Arial;
+}
+.vl {
+    border-left: 6px solid #0066cc;
+    height: 100px;
+    position: left;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+  }
+.box{
+background-color:#e6e6e6;
+border-radius : 7px;
+margin-left:20px;
+margin-right: 20px;
+margin-bottom: 20px;
+
 }
